@@ -3,21 +3,26 @@ const axios = require('axios')
 const app = express()
 const port = 3030
 const keys = require('./keys.json')
+const cors = require('cors')
+app.use(cors())
 
 const commonHeader = {
-  'Authorization': `Bearer ${keys['key']}`
+  'Authorization': `Bearer ${keys['key']}`,
+  'Access-Control-Allow-Origin': '*'
 }
 
-app.get('/', async (req, res) => {
+app.get('/CampGrounds/:location/:offset', async (req, res) => {
   const url = 'https://api.yelp.com/v3/businesses/search'
   const params = {
-    location: 'New Jersey',
-    term: 'campground tent'
+    location: req.params || 'New Jersey',
+    term: 'campground tent',
+    limit: 50,
+    offset: req.params.offset || 0
   }
 
-  const got = await axios.get(url, {params: params, headers: commonHeader})
-  console.log(got.data)
-//   await axios.get()
+  const apiCall = await axios.get(url, {params: params, headers: commonHeader})
+
+  res.json(apiCall.data)
 })
 
 app.listen(port, () => {
