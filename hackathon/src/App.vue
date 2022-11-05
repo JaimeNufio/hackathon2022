@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+    <div id="nav">
+    </div>
     <!-- <img src="./assets/logo.png"> -->
     <nav class="navbar navbar-dark navbar-expand-lg bg-dark mb-5">
   <div class="container-fluid">
@@ -21,6 +23,9 @@
         <li class="nav-item">
           <a class="nav-link disabled">Disabled</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#/about">About</a>
+          </li>
       </ul>
     </div>
   </div>
