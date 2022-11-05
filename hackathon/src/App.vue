@@ -2,47 +2,67 @@
   <div id="app">
     <!-- <img src="./assets/logo.png"> -->
     <nav class="navbar navbar-dark navbar-expand-lg bg-dark mb-5">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Fyrestarter</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Campers Checklist</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Nearby Campsites</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-    <router-view/>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Fyrestarter</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Campers Checklist</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Nearby Campsites</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <span class="thisFont">AHHHH</span>
+    <router-view />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
-}
+  name: "App"
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   /* margin-top: 60px; */
 }
-@import '~bootstrap/dist/css/bootstrap.css'
+
+.thisFont {
+  font-family: "Actor", sans-serif;
+  font-family: "Hind Madurai", sans-serif;
+  
+}
+
+p{
+  font-family: "Montserrat", sans-serif;
+}
+@import "~bootstrap/dist/css/bootstrap.css";
 </style>
