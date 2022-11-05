@@ -38,7 +38,6 @@
         </div>
       </div>
     </div>
-
       <!-- <li>
         <a
           href="https://vuejs.org"
