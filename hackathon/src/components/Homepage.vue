@@ -2,11 +2,11 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
-    <div class="container BiggerContainer">
+    <div class="container">
       <div class="row align-items-md-stretch">
         <div class="col-md-6">
           <div class="h-100 p-5 text-bg-dark rounded-3">
-            <img src="hackathon\src\assets\campfire.jpg" alt="Campfire" style="width:150px">
+            <img src="../assets/campfire.jpg" alt="Campfire" style="width:350px" >
             <!-- <button class="btn btn-outline-light" type="button">
               Example button
             </button> -->
@@ -63,6 +63,5 @@ a {
   padding: 20px;
 }
 
-.BiggerContainer {
-}
+
 </style>
