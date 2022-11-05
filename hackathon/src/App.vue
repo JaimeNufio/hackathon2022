@@ -33,8 +33,8 @@
 
 <script>
 export default {
-  name: "App"
-};
+  name: 'App'
+}
 </script>
 
 <style>
@@ -50,7 +50,6 @@ export default {
 .thisFont {
   font-family: "Actor", sans-serif;
   font-family: "Hind Madurai", sans-serif;
-  
 }
 
 p{
