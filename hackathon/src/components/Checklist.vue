@@ -18,18 +18,21 @@
 </template>
 
 <script>
-import items from '../../api/better_camp_equipment.json'
+import items from '../../api/better_camp_equipment.js'
 
 export default ({
   data () {
     return {
       score: null,
-      categories: []
+      items: null,
+      categories: {}
     }
   },
 
   mounted () {
     this.getScore()
+    this.items = items.items
+    this.sortItems()
   },
 
   methods: {
@@ -43,8 +46,16 @@ export default ({
       })
     },
 
-    async sortToCategories () {
-
+    async sortItems () {
+      // console.log(items)
+      this.items.forEach((item) => {
+        console.log(item)
+        if (this.score && item['Necessity Level'] > this.score) { return }
+        if (!Object.keys(this.categories).includes(item.Category)) {
+          this.categories[item.Category] = []
+        }
+        this.categories[item.Category].push(item)
+      })
     }
   }
 })
