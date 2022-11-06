@@ -1,14 +1,17 @@
 <template>
-<div class="container">
-  <div v-if="score === null && categories.length === 0" class="survey-remind my-5">
+<div class="container" style="min-height:80vh">
+  <div v-if="score === null" class="survey-remind my-5">
     <h1>Hold on!</h1>
     <h4 > You haven't taken our recommendation survey yet! </h4>
-    <button class="btn btn-primary" @click="toSurvey"> Take our Survey</button>
+    <!-- <button class="btn btn-primary" @click="toSurvey"> Take our Survey</button> -->
+    <button @click="goToSurvey" class="btn btn-outline-light mt-5" style="font-size:1.2em;  margin-left: auto; order: 2;" type="button">
+             Let's Get Started
+            </button>
   </div>
 
   <!-- TODO: Preview recomendations -->
 
-    <div class="checklist my-5">
+    <div v-else class="checklist my-5 p-5">
       <div class="">
         <h1> Some Recommendations</h1>
         <hr></hr>
@@ -112,6 +115,10 @@ export default ({
 
       localStorage.setItem('listState', JSON.stringify(output))
       console.log('should have updated?')
+    },
+
+    async goToSurvey () {
+      await this.$router.push({path: '/survey'})
     }
   }
 })
@@ -145,7 +152,6 @@ export default ({
 
 .checklist{
   background-color: rgba(25,25,25,.4);
-  padding: 15px;
-  border-radius: 5px;
+  border-radius: 25px;
 }
 </style>

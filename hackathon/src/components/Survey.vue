@@ -1,6 +1,8 @@
 <template>
-  <div class="campsites my-5 ">
-    <div class="container">
+  <div class="campsites container my-5">
+
+    <div style="background-color:rgba(25,25,25,.4);border-radius: 25px;" class="margin-auto p-5 pb-2">
+    <div class="container" >
       <div class="heading thisFont text-left">
         <h1>Before We Started...</h1>
         <div>Can you answer a few questions for us?</div>
@@ -10,17 +12,26 @@
     <div class="mt-5 question-box">
       <div class="question">{{ questions[current.questionIndex].question}}</div>
       <div class="row">
-        <button
+        <!-- <button
           @click="processAnswer(answer)"
           class="col answer"
           v-for="answer in questions[current.questionIndex].options"
           :key="answer">
             {{ answer }}
+        </button> -->
+
+        <button
+          v-for="answer in questions[current.questionIndex].options" :key="answer"
+          @click="processAnswer(answer)"
+          class="btn btn-outline-light col ans m-2"
+          style="font-size:1.2em;  margin-left: auto; order: 2;" type="button">
+            {{answer}}
         </button>
       </div>
       <br/>
         <img style="min-width:400px; max-width:500px; :1" :src="currentImage"/>
     </div>
+  </div>
   </div>
 </template>
 
@@ -32,7 +43,7 @@ export default{
         // conditions (expect wet/cold)
         //
         {
-          'question': 'Have you been camping before?', // experience?
+          'question': 'Have you ever been camping before?', // experience?
           'options': ['Yes', 'No'],
           'scoreDelta': [0, 1],
           'answer': -1,
@@ -111,7 +122,7 @@ export default{
       } else {
         localStorage.removeItem('score')
         localStorage.removeItem('extra')
-        localStorage.removeItem('listItems')
+        localStorage.removeItem('listState')
 
         localStorage.setItem('score', this.current.score)
         localStorage.setItem('extra', this.current.extra)
@@ -123,7 +134,7 @@ export default{
     async nextRouter () {
       console.log(this.$router)
       await this.$router.push({
-        name: 'Browse',
+        name: 'Checklist',
         params: {
           score: this.current.score,
           recommend: this.current.extra

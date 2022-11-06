@@ -12,7 +12,7 @@
           <div class=" p-5 text-bg-dark rounded-3 d-flex ">
             <div class="flex-1"></div>
             <!-- <img src="../assets/campfire.jpg" alt="Campfire" style="width:350px" > -->
-           <button href="/survey" class="btn btn-outline-light" style="font-size:1.2em;  margin-left: auto; order: 2;" type="button">
+           <button @click="goToSurvey" class="btn btn-outline-light" style="font-size:1.2em;  margin-left: auto; order: 2;" type="button">
              Let's Get Started
             </button>
           </div>
@@ -89,9 +89,14 @@ export default {
     }
   },
   created () {
-    localStorage.removeItem('score')
-    localStorage.removeItem('extra')
-    localStorage.removeItem('listItems')
+    // localStorage.removeItem('score')
+    // localStorage.removeItem('extra')
+    // localStorage.removeItem('listItems')
+  },
+  methods: {
+    async goToSurvey () {
+      await this.$router.push({path: '/survey'})
+    }
   }
 }
 </script>
