@@ -1,28 +1,22 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <div class="container">
-      <div class="row align-items-md-stretch">
+  <div class="container mt-5" style="height:40vh">
+    <div style="margin-bottom:15vh">
+    <h1 style="text-align:left; font-size: 3em;">FyreStartr</h1>
+    <h2 style="text-align:left; font-size: 1.2em;">Your first stop towards making your camping trip awesome.</h2>
+    </div>
+    <div class="">
+      <div class="row align-items-md-stretch" style="margin-top:5vh">
+        <div class="col-md-6"></div>
         <div class="col-md-6">
-          <div class="h-100 p-5 text-bg-dark rounded-3">
-            <img src="../assets/campfire.jpg" alt="Campfire" style="width:350px" >
-            <!-- <button class="btn btn-outline-light" type="button">
-              Example button
-            </button> -->
+          <div class="h-100 p-3 text-bg-dark rounded-3 d-flex">
+            <div class="flex-1" s></div>
+            <!-- <img src="../assets/campfire.jpg" alt="Campfire" style="width:350px" > -->
+           <button href="/survey" class="btn btn-outline-light float-right" style="font-size:1.2em;  margin-left: auto; order: 2;" type="button">
+             Let's Get Started
+            </button>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="h-0 p-5 bg-light border roundEdge">
-            <h2>Ipsum Lorem</h2>
-            <p>
-              {{ lorem }}
-            </p>
-            <!-- <button class="btn btn-outline-secondary" type="button">
-            Example button
-          </button> -->
-          </div>
-        </div>
+
       </div>
     </div>
   </div>
@@ -59,9 +53,6 @@ ul {
 li {
   display: inline-block;
   margin: 0 10px;
-}
-a {
-  color: #42b983;
 }
 
 .roundEdge {

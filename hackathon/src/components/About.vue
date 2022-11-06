@@ -1,6 +1,21 @@
 <template>
     <div class="about">
-        <h1>This is about </h1>
+        <h1 class="my-5">About Us</h1>
+        <div style="min-height:50vh;">
+        <div  style="margin-bottom: 50px; display:flex; margin:auto !important; width:70vw">
+          <div><img style=" max-width:150px; border-radius:1000px; aspect-ratio:1" src="https://media-exp1.licdn.com/dms/image/C4D03AQHpqG6n3Bf8FQ/profile-displayphoto-shrink_800_800/0/1626735634295?e=1673481600&v=beta&t=YQZFhRuQaKXyz5ht987O4yyqegCNHsqEqYi4Pr6tUjw"></img></div>
+          <div style="flex:1; ">
+            <p class="p-4 pb-2" style="text-align:left;">Hi, my name is Jaime Nufio. I'm a graduate student puruing a masters in Data Science. I'm currently employed as a fullstack developer at a startup in NYC. I'm a hobbyist programmer who likes to tinker to learn new things.</p>
+            <p class="px-4" style="text-align:left;">You can find projects all of my projects, including this webapp, on my Github: <a href="https://github.com/JaimeNufio">https://github.com/JaimeNufio</a></p>
+          </div>
+        </div>
+        <div style="display:flex; margin:auto !important; width:70vw">
+          <div style="flex:1; ">
+            <p class="p-4" style="text-align:left;">Stinky antonio bio here boy i sure hope he remembers to change it</p>
+          </div>
+          <div><img style=" max-width:150px; border-radius:1000px; aspect-ratio:1" src="https://media.tenor.com/k_mQhxNORnsAAAAC/korone-no.gif"></img></div>
+        </div>
+        </div>
     </div>
 </template>
 
@@ -9,8 +24,6 @@ export default {
   name: 'About',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App',
-      navy: `What the fuck did you just fucking say about me, you little bitch? I'll have you know I graduated top of my class in the Navy Seals, and I've been involved in numerous secret raids on Al-Quaeda, and I have over 300 confirmed kills. I am trained in gorilla warfare and I'm the top sniper in the entire US armed forces. You are nothing to me but just another target. I will wipe you the fuck out with precision the likes of which has never been seen before on this Earth, mark my fucking words. You think you can get away with saying that shit to me over the Internet? Think again, fucker. As we speak I am contacting my secret network of spies across the USA and your IP is being traced right now so you better prepare for the storm, maggot. The storm that wipes out the pathetic little thing you call your life. You're fucking dead, kid. I can be anywhere, anytime, and I can kill you in over seven hundred ways, and that's just with my bare hands. Not only am I extensively trained in unarmed combat, but I have access to the entire arsenal of the United States Marine Corps and I will use it to its full extent to wipe your miserable ass off the face of the continent, you little shit. If only you could have known what unholy retribution your little "clever" comment was about to bring down upon you, maybe you would have held your fucking tongue. But you couldn't, you didn't, and now you're paying the price, you goddamn idiot. I will shit fury all over you and you will drown in it. You're fucking dead, kiddo.`
     }
   }
 }

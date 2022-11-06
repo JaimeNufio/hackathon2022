@@ -18,8 +18,9 @@
         </div>
       </div>
     </div>
+    <div style="font-size:1.5em;text-align:left; margin-bottom: 20px;">Testimonals:</div>
     <div class="reviews mb-5" style="min-height:40vh">
-        <div class="mt-5" v-for="review in reviews" :key="review.id">
+        <div class="mt- review p-3 mb-3" v-for="review in reviews" :key="review.id">
           <div style="text-align:left; font-style: italic;">"<a :href="review.url">"{{review.text}}"</a></div>
           <div  style="text-align:right; font-style: italic;">- {{review.user.name}}, <span  v-for="i in new Array(Math.floor(review.rating))" :key="i">⭐</span></div>
         </div>
@@ -62,6 +63,10 @@ export default {
 </script>
 
 <style scoped>
+
+a{
+  color:white
+}
 .header{
   text-align: left;
   display: flex;
@@ -69,5 +74,11 @@ export default {
 
 .heading{
   padding:25px;
+}
+
+.review{
+  border-radius: 5px;
+  background-color: rgb(25,25,25,.5);
+
 }
 </style>

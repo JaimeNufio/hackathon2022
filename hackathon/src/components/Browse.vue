@@ -1,8 +1,11 @@
 <template @scroll="onScroll">
     <div class="about" >
-        <h1>Browse Camp Ground</h1>
+      <div class="my-5">
+        <h1>Find A Camp!</h1>
+        <h5>Click on an image to see reviews and more information.</h5>
+      </div>
 
-      <div id="app">
+      <div v-if="campgrounds"  id="app">
   <div class="list-group-wrapper">
     <transition name="fade">
       <div class="loading" v-show="loading">
@@ -10,14 +13,14 @@
       </div>
     </transition>
 
-    <div class="list-group " id="infinite-list">
-          <div class="row scroll text-align-center">
-      <div v-for="camp in campgrounds" :key="camp.id" class="col-12 card no-pad" @click="goToRecommendations(camp)">
-              <img :src="camp.image_url"></img>
-              <div class="label-item">
-                <div>{{camp.name}}</div>
-                <div>{{`${camp.location.city}, ${camp.location.state}`}}</div>
-              </div>
+    <div class="list-group" id="infinite-list">
+      <div class="row scroll text-align-center">
+        <div v-for="camp in campgrounds" :key="camp.id" class="col-4 card no-pad"  @click="goToRecommendations(camp)">
+          <img :src="camp.image_url || 'https://upload.wikimedia.org/wikipedia/commons/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg'"></img>
+          <div class="label-item">
+            <div>{{camp.name}}</div>
+            <div>{{`${camp.location.city}, ${camp.location.state}`}}</div>
+          </div>
         </div>
         </div>
     </div>
@@ -173,10 +176,9 @@ body {
     margin: 0 0 5px 0;
     font-weight: 900;
     font-size: 4rem;
-    color: #fff;
+    color: rgb(0, 0, 0);
   }
   h4 .heading {
-    color: lighten(#5c3d86,30%);
     text-align: center;
     margin: 0 0 35px 0;
     font-weight: 400;
@@ -185,13 +187,13 @@ body {
 
 .list-group-wrapper {
   position: relative;
-  margin:auto;
+  margin:50px;
   height: 100vh;
 }
 .list-group {
   overflow: auto;
   height: 85vh;
-  border: 2px solid #dce4ec;
+  border: 2px solid #000000;
   border-radius: 5px;
 }
 .list-group-item {
@@ -199,12 +201,12 @@ body {
   border-left: none;
   border-right: none;
   border-top: none;
-  border-bottom: 2px solid #dce4ec;
+  border-bottom: 2px solid #000000;
 }
 .loading {
   text-align: center;
   position: absolute;
-  color: #fff;
+  color: rgb(0, 0, 0);
   z-index: 9;
   padding: 8px 18px;
   border-radius: 5px;

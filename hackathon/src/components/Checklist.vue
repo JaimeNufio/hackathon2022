@@ -9,8 +9,9 @@
   <!-- TODO: Preview recomendations -->
 
     <div class="checklist my-5">
-      <div>
+      <div class="">
         <h1> Some Recommendations</h1>
+        <hr></hr>
       </div>
       <div v-for="cat in Object.keys(categories)" :key="cat" class="checklist-cat mb-5">
         <div class="checklist-heading">{{cat}}<div>
@@ -18,6 +19,7 @@
           <input :checked="item.selected" @click="handleCheckBoxState(cat,item.ID)" type="checkbox"></input>
           <div class="checklist-item">{{item['Obj Name']}}</div>
         </div>
+        <hr></hr>
       </div>
     </div>
 </div>
@@ -139,5 +141,11 @@ export default ({
 
 .checklist-item{
   font-size:1em;
+}
+
+.checklist{
+  background-color: rgba(25,25,25,.4);
+  padding: 15px;
+  border-radius: 5px;
 }
 </style>

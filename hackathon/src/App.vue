@@ -6,7 +6,7 @@
     <!-- <img src="./assets/logo.png"> -->
     <nav class="navbar navbar-dark navbar-expand-lg bg-dark mb-0">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Fyrestartr</a>
+        <a class="navbar-brand" href="/">Fyrestartr</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -45,7 +45,7 @@
     </div>
 
     <!-- Footer -->
-        <footer class="footer mt-auto py-3 bg-light">
+        <footer class="footer mt-auto py-3 bg-dark">
             <div class="container">
                 <!-- <div class="row">
                     <div class="col-sm-6 col-md-3 item">
@@ -91,8 +91,10 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #ffffff;
   height: 100%;
+  background: rgb(236,155,8);
+background: linear-gradient(149deg, rgba(236,155,8,1) 0%, rgba(212,9,9,1) 53%, rgba(0,0,0,1) 100%);
   /* margin-top: 60px; */
 }
 
@@ -110,7 +112,7 @@ footer {
 }
 .footer-dark {
   padding:50px 0;
-  color:#f0f9ff;
+  color:#e1d5d5;
   background-color:#282d32;
 }
 
