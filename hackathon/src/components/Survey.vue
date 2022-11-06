@@ -74,12 +74,13 @@ export default{
       current: {
         questionIndex: 0,
         subQuestionIndex: -1,
-        score: 3,
+        score: 2,
         extra: ''
       }
     }
   },
   methods: {
+
     async processAnswer (ans) {
       // question option index
       const currentQuestion = this.questions[this.current.questionIndex]
