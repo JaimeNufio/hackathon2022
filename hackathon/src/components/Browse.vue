@@ -189,11 +189,23 @@ body {
   height: 100vh;
 }
 .list-group {
-  /* overflow: auto; */
+  overflow-y: scroll;
+  overflow-x: hidden;
   height: 85vh;
   border: 2px solid #dce4ec;
   border-radius: 5px;
 }
+/* Hide scrollbar for Chrome, Safari and Opera */
+.list-group::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.list-group {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 .list-group-item {
   margin-top: 1px;
   border-left: none;
