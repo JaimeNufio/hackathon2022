@@ -18,9 +18,9 @@
 </template>
 
 <script>
+import items from '../../api/better_camp_equipment.json'
 
 export default ({
-  import json from '../../api/better_camp_equipment.json'
   data () {
     return {
       score: null,
@@ -41,9 +41,9 @@ export default ({
       await this.$router.push({
         name: 'Survey'
       })
-    }
+    },
 
-    async sortToCategories{
+    async sortToCategories () {
 
     }
   }
