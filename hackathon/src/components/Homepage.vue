@@ -1,17 +1,17 @@
 <template>
   <div>
   <div class="p-5" style="height:50vh; ">
-    <div style="margin-bottom:15vh">
+    <div style="margin-bottom:5vh">
     <h1 style="text-align:left; font-size: 3em;">FyreStartr</h1>
     <h2 style="text-align:left; font-size: 1.2em;">Your first stop towards making your camping trip awesome.</h2>
     </div>
     <div class="">
-      <div class="row align-items-md-stretch" style="margin-top:5vh">
-        <div class="col-md-6"></div>
+      <div class="row align-items-md-stretch">
+        <div class="col-md-6 ">
+          <img src="../assets/logo_fire.png" class="float-left" alt="Campfire" style="width:200px" ></img></div>
         <div class="col-md-6 pr-5">
           <div class=" p-5 text-bg-dark rounded-3 d-flex ">
             <div class="flex-1"></div>
-            <!-- <img src="../assets/campfire.jpg" alt="Campfire" style="width:350px" > -->
            <button @click="goToSurvey" class="btn btn-outline-light" style="font-size:1.2em;  margin-left: auto; order: 2;" type="button">
              Let's Get Started
             </button>
