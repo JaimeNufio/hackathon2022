@@ -43,7 +43,8 @@ export default {
       campgrounds: [],
       offset: 0,
       hasScrolledToBottom: false,
-      isVisible: false
+      isVisible: false,
+      knownMax: 0
     }
   },
 
@@ -66,23 +67,28 @@ export default {
 
   methods: {
     async fetchCampGrounds () {
-      const camps = (
+      const fetchedData = (
         await axios.get(`http://localhost:3030/campgrounds`,
           {params: {offset: this.offset}}
-        )
-      ).data.businesses
-      this.campgrounds.push(...camps)
+        )).data
+
+      console.log(fetchedData)
+      this.knownMax = fetchedData.total
+
+      this.campgrounds.push(...fetchedData.businesses)
     },
 
     loadMore () {
       this.loading = true
       setTimeout(e => {
-        this.offset += 1
-        this.fetchCampGrounds()
+        if (this.offset * 50 > this.campgrounds.length) { return } else {
+          this.offset += 1
+          this.fetchCampGrounds()
+        }
+
         // for (var i = 0; i < 20; i++) {
         //   this.items.push('Item ' + this.nextItem++)
         // }
-        console.log('ah')
         this.loading = false
       }, 200)
     }

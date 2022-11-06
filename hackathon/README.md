@@ -29,4 +29,4 @@ Nice Homepage - Tony
 Research on Camp Equipment - ?
 Form for dificulty - 
 Form for checklist - 
-Page to recommend to items - 
+Page to recommend items - 
