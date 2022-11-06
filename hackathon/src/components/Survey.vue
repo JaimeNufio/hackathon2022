@@ -102,6 +102,7 @@ export default{
         this.current.questionIndex += 1
       } else {
         localStorage.setItem('score', this.current.score)
+        localStorage.setItem('extra', this.current.extra)
         console.log('current score', this.current.score)
         await this.nextRouter()
       }
