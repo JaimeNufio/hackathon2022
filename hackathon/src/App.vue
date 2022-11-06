@@ -2,7 +2,7 @@
   <div id="app">
     <div id="nav"></div>
     <!-- <img src="./assets/logo.png"> -->
-    <nav class="navbar navbar-dark navbar-expand-lg bg-dark mb-5">
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark mb-0">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Fyrestartr</a>
         <button
@@ -16,7 +16,7 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="container">
+
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
@@ -36,7 +36,7 @@
               </li>
             </ul>
           </div>
-        </div>
+        
       </div>
     </nav>
 

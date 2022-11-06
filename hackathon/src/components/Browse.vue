@@ -92,7 +92,7 @@ export default {
     loadMore () {
       this.loading = true
       setTimeout(e => {
-        if (this.offset * 5 > this.campgrounds.length) { return } else {
+        if (this.offset * 50 > this.campgrounds.length) { return } else {
           this.offset += 1
           this.fetchCampGrounds()
         }
@@ -129,6 +129,7 @@ img {
   bottom: 0px;
   height: 50px;
   width:100%;
+  font-size: 2rem;
 
   padding-left:20px;
   background: rgba(0, 0, 0, .6);
