@@ -1,32 +1,13 @@
-# fyrestarter
+# Getting Started:
 
-> A Vue.js project
+1. clone the repo from git.
 
-## Build Setup
+1. in 'hackathon/api' there is a file called "keys copy.json", the attributes inside are blank but [you can retrieve your clientID and API Key from here!](https://www.yelp.com/developers/v3/manage_app)
+1. update 'keys copy.json' and renamed it to `keys.json`
+1. cd into 'hackathon'
+1. run `npm start`
+1. open new termina
+1. cd into 'hackaton/api'
+1. run `node index.js`
+1. open web browser to "localhost:8080"
 
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-
-
-
-TODO:
-
-infinite scroll camp search - Jaime
-Nice Homepage - Tony
-Research on Camp Equipment - ?
-Form for dificulty - 
-Form for checklist - 
-Page to recommend items - 
