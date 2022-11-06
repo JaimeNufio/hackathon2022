@@ -11,17 +11,21 @@ const commonHeader = {
   'Access-Control-Allow-Origin': '*'
 }
 
-app.get('/CampGrounds/:location/:offset', async (req, res) => {
+app.get('/campgrounds', async (req, res) => {
+  console.log('AH')
   const url = 'https://api.yelp.com/v3/businesses/search'
   const params = {
-    location: req.params || 'New Jersey',
-    term: 'campground tent',
+    location: req.params.location || '80010',
+    term: 'camp',
     limit: 50,
+    radius: 40000,
     offset: req.params.offset || 0
   }
 
-  const apiCall = await axios.get(url, {params: params, headers: commonHeader})
+  console.log(params)
 
+  const apiCall = await axios.get(url, {params: params, headers: commonHeader})
+  console.log(`Fetched at offset ${params.offset}`)
   res.json(apiCall.data)
 })
 
