@@ -8,7 +8,7 @@
           <div><img style=" max-width:150px; border-radius:1000px; aspect-ratio:1" src="https://media-exp1.licdn.com/dms/image/C4D03AQHpqG6n3Bf8FQ/profile-displayphoto-shrink_800_800/0/1626735634295?e=1673481600&v=beta&t=YQZFhRuQaKXyz5ht987O4yyqegCNHsqEqYi4Pr6tUjw"></img></div>
           <div style="flex:1; ">
             <p class="p-4 pb-2 pt-2" style="text-align:left;">Hi, my name is Jaime Nufio. I'm a graduate student puruing a masters in Data Science. I'm currently employed as a fullstack developer at a startup in NYC. I'm a hobbyist programmer who likes to tinker to learn new things.</p>
-            <p class="px-4" style="text-align:left;">You can find projects all of my projects, including this webapp, on my Github: <a href="https://github.com/JaimeNufio">https://github.com/JaimeNufio</a></p>
+            <p class="px-4" style="text-align:left;">You can find projects all of my projects, including this webapp, on my Github: <a href="https://github.com/JaimeNufio">https://github.com/JaimeNufio</a> and you can contact me via my <a href="https://www.linkedin.com/in/jaimenufio/">LinkedIn</a></p>
           </div>
         </div>
         <div style="display:flex; margin:auto !important; width:70vw">

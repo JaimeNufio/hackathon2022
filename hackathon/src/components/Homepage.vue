@@ -89,9 +89,9 @@ export default {
     }
   },
   created () {
-    // localStorage.removeItem('score')
-    // localStorage.removeItem('extra')
-    // localStorage.removeItem('listItems')
+    localStorage.removeItem('score')
+    localStorage.removeItem('extra')
+    localStorage.removeItem('listItems')
   },
   methods: {
     async goToSurvey () {

@@ -17,14 +17,31 @@
         <hr></hr>
       </div>
       <div v-for="cat in Object.keys(categories)" :key="cat" class="checklist-cat mb-5">
-        <div class="checklist-heading">{{cat}}<div>
-        <div v-for="item in categories[cat]" :key="item.ID" class="flex">
-          <input :checked="item.selected" @click="handleCheckBoxState(cat,item.ID)" type="checkbox"></input>
-          <div class="checklist-item">{{item['Obj Name']}}</div>
+        <div class="checklist-heading pb-5">{{cat}}<div>
+
+          <div class="container-grid mt-3">
+
+            <div v-for="item in categories[cat]" :key="item.ID"
+              class="outer col-4 grid-column" style="background-color:rgb(36 177 66); border-radius: 25px; overflow: hidden;"
+              @click="handleCheckBoxState(cat,item.ID)"
+              :class=" item.selected ? 'p-1' : 'p-0'
+              ">
+              <div style="width:100%; height:100%; background:black; border-radius: 25px; overflow: hidden;">
+                <img class="image-wrangle" :src="item.image">
+              </div>
+              <div></div>
+              </div>
+
+            </div>
+
         </div>
+
+          <div class="mt-4">{{selectedOf(cat)}}</div>
+
         <hr></hr>
       </div>
     </div>
+
 </div>
  </div>
 
@@ -61,9 +78,13 @@ export default ({
     },
 
     async sortItems () {
+      let x = localStorage.getItem('extra')
+      let hasDog = x.includes('dog')
+      // let hasCold = x.includes('cold')
+
       if (localStorage.getItem('listState') === null) {
         this.items.forEach((item) => {
-          console.log(item)
+          if (item['Obj Name'].toLowerCase().includes('dog') && !hasDog) { return }
           if (this.score && item['Necessity Level'] > this.score) { return }
           if (!Object.keys(this.categories).includes(item.Category)) {
             this.categories[item.Category] = []
@@ -113,12 +134,36 @@ export default ({
         output[catNames[i]] = listOut[i]
       }
 
+      this.categories = output
+
       localStorage.setItem('listState', JSON.stringify(output))
       console.log('should have updated?')
     },
 
     async goToSurvey () {
       await this.$router.push({path: '/survey'})
+    },
+
+    selectedOf (cat) {
+      let have = []
+
+      let catItems = this.categories[cat]
+
+      catItems.map((item) => {
+        if (item.selected) {
+          have.push(item['Obj Name'])
+        }
+      })
+
+      let cnt = have.length
+      let outString = cnt ? 'So far you have: ' : ''
+      for (let i = 0; i < cnt; i++) {
+        outString += have.pop()
+
+        outString += ', '
+      }
+
+      return outString.substring(0, outString.length - 2)
     }
   }
 })
@@ -126,6 +171,7 @@ export default ({
 </script>
 
 <style>
+
 .survey-remind{
   text-align: left;
 }
@@ -153,5 +199,61 @@ export default ({
 .checklist{
   background-color: rgba(25,25,25,.4);
   border-radius: 25px;
+}
+
+.container-grid{
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.container-grid .grid-column {
+  aspect-ratio: 1;
+  width: 100%;
+}
+
+.image-wrangle{
+  overflow: hidden;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
 </style>
