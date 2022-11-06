@@ -47,7 +47,7 @@ export default{
           'options': ['Yes', 'No'],
           'scoreDelta': [0, 1],
           'answer': -1,
-          'img': 'genericcamp.png'
+          'img': 'genericcamp-removebg.png'
         },
         {
           'trigger': 0,
@@ -55,7 +55,7 @@ export default{
           'options': ['Once', 'A few times', 'regularly'],
           'scoreDelta': [1, 0.25, 0],
           'answer': -1,
-          'img': 'experience.png'
+          'img': 'experience-removebg.png'
 
         },
         {
@@ -63,7 +63,7 @@ export default{
           'options': ['A day', 'A weekend', 'A week or more'],
           'scoreDelta': [0, 0.5, 1],
           'answer': -1,
-          'img': 'howlong.png'
+          'img': 'howlong-removebg.png'
         },
         {
           'question': 'Are you bringing a dog?', // dog?
@@ -71,7 +71,7 @@ export default{
           'special': [true, false],
           'recommend': 'dog',
           'answer': -1,
-          'img': 'dog.png'
+          'img': 'dog-removebg.png'
         },
         {
           'question': 'Do you forsee wet/cold conditions?', // dog?
@@ -79,7 +79,7 @@ export default{
           'special': [true, true, false],
           'recommend': 'cold',
           'answer': -1,
-          'img': 'cold.png'
+          'img': 'cold-removebg.png'
         },
         {
           'question': 'Are you on a budget?', // budget?
@@ -87,7 +87,7 @@ export default{
           'special': [true, false],
           'scoreDelta': [-0.5, 0],
           'answer': -1,
-          'img': 'budget.png'
+          'img': 'budget-removebg.png'
         }
       ],
       current: {
