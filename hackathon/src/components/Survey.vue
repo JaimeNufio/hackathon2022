@@ -80,7 +80,7 @@ export default{
     }
   },
   methods: {
-    processAnswer (ans) {
+    async processAnswer (ans) {
       // question option index
       const currentQuestion = this.questions[this.current.questionIndex]
       const index = currentQuestion.options.indexOf(ans)
@@ -92,12 +92,29 @@ export default{
       }
 
       if (Object.keys(currentQuestion).includes('special') && currentQuestion.special[index]) {
-        this.current.extra += currentQuestion.recommend
+        this.current.extra += currentQuestion.recommend + ' '
       }
 
       this.questions[this.current.questionIndex].answer = ans
-      this.current.questionIndex += 1
-      console.log('current score', this.current.score)
+
+      if (this.current.questionIndex < this.questions.length - 1) {
+        this.current.questionIndex += 1
+      } else {
+        localStorage.setItem('score', this.current.score)
+        console.log('current score', this.current.score)
+        await this.nextRouter()
+      }
+    },
+
+    async nextRouter () {
+      console.log(this.$router)
+      await this.$router.push({
+        name: 'Browse',
+        params: {
+          score: this.current.score,
+          recommend: this.current.extra
+        }
+      })
     }
   }
 }

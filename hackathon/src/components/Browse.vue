@@ -11,8 +11,8 @@
     </transition>
 
     <div class="list-group " id="infinite-list">
-          <div class="row scroll text-align-center">
-      <div v-for="camp in campgrounds" :key="camp.id" class="card no-pad">
+          <div class="row scroll text-align-center" ">
+      <div v-for="camp in campgrounds" :key="camp.id" class="col-12 card no-pad" @click="goToRecommendations(camp)">
               <img :src="camp.image_url"></img>
               <div class="label-item">
                 <div>{{camp.name}}</div>
@@ -32,7 +32,7 @@ import axios from 'axios'
 
 export default {
   name: 'Browse',
-  el: '#app',
+  el: null,
   data () {
     return {
       loading: false,
@@ -52,7 +52,7 @@ export default {
     this.fetchCampGrounds()
   },
 
-  mounted () {
+  onMounted () {
     // Detect when scrolled to bottom.
     const listElm = document.querySelector('#infinite-list')
     listElm.addEventListener('scroll', e => {
@@ -78,10 +78,21 @@ export default {
       this.campgrounds.push(...fetchedData.businesses)
     },
 
+    async goToRecommendations (camp) {
+      await this.$router.push({
+        name: 'Checklist',
+        params: {
+          score: this.$route.params.score,
+          recommend: this.$route.params.recommend,
+          camp: camp
+        }
+      })
+    },
+
     loadMore () {
       this.loading = true
       setTimeout(e => {
-        if (this.offset * 50 > this.campgrounds.length) { return } else {
+        if (this.offset * 5 > this.campgrounds.length) { return } else {
           this.offset += 1
           this.fetchCampGrounds()
         }

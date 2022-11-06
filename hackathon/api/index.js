@@ -16,9 +16,9 @@ app.get('/campgrounds', async (req, res) => {
   const params = {
     location: req.params.location || '80010',
     term: 'campground',
-    limit: 50,
+    limit: 5,
     radius: 40000,
-    offset: parseInt(req.query.offset) * 50 || 0
+    offset: parseInt(req.query.offset) * 5 || 0
   }
 
   console.log(params)
