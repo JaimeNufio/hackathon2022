@@ -13,9 +13,10 @@
         </div>
         <div style="display:flex; margin:auto !important; width:70vw">
           <div style="flex:1; ">
-            <p class="p-4" style="text-align:left;">Stinky antonio bio here boy i sure hope he remembers to change it</p>
+            <p class="p-4" style="text-align:left;">Hi, my name is Antonio Arce. I'm a junior student at NJIT pursuing a Computer Science degree. I'm currently looking for a software engineer internship for the upcomming summer 2023. I have previous experience managing a fast-paced work enviorment being able to consistenly deliver on goals and am looking to make a career switch. </p>
+            <p class="px-4" style="text-align:left;">You can find projects all of my projects on my Github: <a href="https://github.com/thehungryguy">https://github.com/thehungryguy</a> and connect with me on <a href="https://www.linkedin.com/in/antonioarce/">linkedin</a>.</p>
           </div>
-          <div><img style=" max-width:150px; border-radius:1000px; aspect-ratio:1" src="https://media.tenor.com/k_mQhxNORnsAAAAC/korone-no.gif"></img></div>
+          <div><img style=" max-width:150px; border-radius:1000px; aspect-ratio:1" src="https://media-exp1.licdn.com/dms/image/D4E03AQH-d2YaFv99LQ/profile-displayphoto-shrink_400_400/0/1667743126450?e=1673481600&v=beta&t=lZLGfNkrj6pfsnmk13HH94rfn3tLCb51K3cUihGvJ1Y"></img></div>
         </div>
         </div>
         </div>
