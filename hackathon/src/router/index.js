@@ -32,11 +32,6 @@ export default new Router({
       path: '/',
       name: 'Homepage',
       component: Homepage
-    },
-    {
-      path: '/checklist',
-      name: "Checklist",
-      component: Checklist
     }
 
   ]

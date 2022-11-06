@@ -11,7 +11,7 @@
     </transition>
 
     <div class="list-group " id="infinite-list">
-          <div class="row scroll text-align-center" ">
+          <div class="row scroll text-align-center">
       <div v-for="camp in campgrounds" :key="camp.id" class="col-12 card no-pad" @click="goToRecommendations(camp)">
               <img :src="camp.image_url"></img>
               <div class="label-item">
