@@ -1,6 +1,6 @@
 <template>
-  <div class="campsites">
-    <div class="container ">
+  <div class="campsites my-5 ">
+    <div class="container">
       <div class="heading thisFont text-left">
         <h1>Before We Started...</h1>
         <div>Can you answer a few questions for us?</div>
@@ -18,6 +18,8 @@
             {{ answer }}
         </button>
       </div>
+      <br/>
+        <img style="min-width:400px; max-width:500px; :1" :src="currentImage"/>
     </div>
   </div>
 </template>
@@ -33,42 +35,48 @@ export default{
           'question': 'Have you been camping before?', // experience?
           'options': ['Yes', 'No'],
           'scoreDelta': [0, 1],
-          'answer': -1
+          'answer': -1,
+          'img': 'genericcamp.png'
         },
         {
           'trigger': 0,
           'question': 'How seasoned of a camper are you?',
           'options': ['Once', 'A few times', 'regularly'],
           'scoreDelta': [1, 0.25, 0],
-          'answer': -1
+          'answer': -1,
+          'img': 'experience.png'
 
         },
         {
-          'question': 'How long do you plan to stay??', // length?
+          'question': 'How long do you plan to stay?', // length?
           'options': ['A day', 'A weekend', 'A week or more'],
           'scoreDelta': [0, 0.5, 1],
-          'answer': -1
+          'answer': -1,
+          'img': 'howlong.png'
         },
         {
           'question': 'Are you bringing a dog?', // dog?
           'options': ['Yes', 'No'],
           'special': [true, false],
           'recommend': 'dog',
-          'answer': -1
+          'answer': -1,
+          'img': 'dog.png'
         },
         {
           'question': 'Do you forsee wet/cold conditions?', // dog?
           'options': ['Yes', 'Maybe', 'No'],
           'special': [true, true, false],
           'recommend': 'cold',
-          'answer': -1
+          'answer': -1,
+          'img': 'cold.png'
         },
         {
           'question': 'Are you on a budget?', // budget?
           'options': ['Yes', 'No'],
           'special': [true, false],
           'scoreDelta': [-0.5, 0],
-          'answer': -1
+          'answer': -1,
+          'img': 'budget.png'
         }
       ],
       current: {
@@ -101,6 +109,10 @@ export default{
       if (this.current.questionIndex < this.questions.length - 1) {
         this.current.questionIndex += 1
       } else {
+        localStorage.removeItem('score')
+        localStorage.removeItem('extra')
+        localStorage.removeItem('listItems')
+
         localStorage.setItem('score', this.current.score)
         localStorage.setItem('extra', this.current.extra)
         console.log('current score', this.current.score)
@@ -118,6 +130,13 @@ export default{
         }
       })
     }
+  },
+  computed: {
+    currentImage: {
+      get () {
+        return require('../assets/' + this.questions[this.current.questionIndex].img)
+      }
+    }
   }
 }
 </script>
@@ -127,7 +146,7 @@ export default{
 .question-box{
   margin:auto;
   width:500px;
-  height: 100px;
+  min-height: 60vh;
 }
 
 .answer{

@@ -40,6 +40,8 @@ export default {
   },
   created () {
     localStorage.removeItem('score')
+    localStorage.removeItem('extra')
+    localStorage.removeItem('listItems')
   }
 }
 </script>

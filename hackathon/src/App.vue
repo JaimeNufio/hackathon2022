@@ -1,6 +1,8 @@
 <template>
-  <div id="app">
-    <div id="nav"></div>
+  <div id="app" class="">
+
+    <div >
+      <div id="nav"></div>
     <!-- <img src="./assets/logo.png"> -->
     <nav class="navbar navbar-dark navbar-expand-lg bg-dark mb-0">
       <div class="container-fluid">
@@ -36,19 +38,16 @@
               </li>
             </ul>
           </div>
-        
+
       </div>
     </nav>
-
-    <div class="content-body">
       <router-view />
     </div>
 
     <!-- Footer -->
-    <div class="footer-dark">
-        <footer>
+        <footer class="footer mt-auto py-3 bg-light">
             <div class="container">
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-sm-6 col-md-3 item">
                         <h3>Services</h3>
                         <ul>
@@ -70,21 +69,20 @@
                         <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
                     </div>
                     <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
-                </div>
+                </div> -->
                 <p class="copyright">FyreStartr © 2022</p>
             </div>
         </footer>
-        </div>
     <!-- Footer -->
   </div>
 </template>
 
 <script>
-import { fab } from "@fortawesome/free-brands-svg-icons";
+import { fab } from '@fortawesome/free-brands-svg-icons'
 
 export default {
-  name: "App"
-};
+  name: 'App'
+}
 </script>
 
 <style>
@@ -107,11 +105,6 @@ p {
   font-family: "Montserrat", sans-serif;
 }
 
-.content-body {
-  display: flex;
-  flex-direction: column;
-  flex: 1 0 auto;
-}
 footer {
   flex-shrink: 0;
 }
@@ -204,7 +197,6 @@ footer {
   font-size:13px;
   margin-bottom:0;
 }
-
 
 @import "~bootstrap/dist/css/bootstrap.css";
 </style>

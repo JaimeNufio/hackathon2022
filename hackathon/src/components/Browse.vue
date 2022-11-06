@@ -15,8 +15,8 @@
       <div v-for="camp in campgrounds" :key="camp.id" class="col-12 card no-pad" @click="goToRecommendations(camp)">
               <img :src="camp.image_url"></img>
               <div class="label-item">
-                <div>{{camp.name}} - {{`${camp.location.city}, ${camp.location.state}`}}</div>
-                <!-- <div>{{`${camp.location.city}, ${camp.location.state}`}}</div> -->
+                <div>{{camp.name}}</div>
+                <div>{{`${camp.location.city}, ${camp.location.state}`}}</div>
               </div>
         </div>
         </div>
@@ -80,7 +80,7 @@ export default {
 
     async goToRecommendations (camp) {
       await this.$router.push({
-        name: 'Checklist',
+        path: `explore/${camp.id}`,
         params: {
           score: this.$route.params.score,
           recommend: this.$route.params.recommend,
@@ -92,7 +92,7 @@ export default {
     loadMore () {
       this.loading = true
       setTimeout(e => {
-        if (this.offset * 50 > this.campgrounds.length) { return } else {
+        if (this.offset * 5 > this.campgrounds.length) { return } else {
           this.offset += 1
           this.fetchCampGrounds()
         }
@@ -112,7 +112,7 @@ export default {
 img {
   object-fit: cover;
   /* width: 230px; */
-  height: 300px;
+  height: 230px;
 }
 
 .no-pad{
@@ -129,10 +129,9 @@ img {
   bottom: 0px;
   height: 50px;
   width:100%;
-  font-size: 2rem;
 
-  padding-left:20px;
-  background: rgba(0, 0, 0, .6);
+  padding-left:10px;
+  background: rgba(0, 0, 0, .4);
   color: black;
 }
 
@@ -190,23 +189,11 @@ body {
   height: 100vh;
 }
 .list-group {
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow: auto;
   height: 85vh;
   border: 2px solid #dce4ec;
   border-radius: 5px;
 }
-/* Hide scrollbar for Chrome, Safari and Opera */
-.list-group::-webkit-scrollbar {
-    display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.list-group {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
 .list-group-item {
   margin-top: 1px;
   border-left: none;

@@ -1,18 +1,17 @@
 <template>
 <div class="container">
-  <div v-if="score === null" class="survey-remind mb-5">
+  <div v-if="score === null && categories.length === 0" class="survey-remind my-5">
     <h1>Hold on!</h1>
     <h4 > You haven't taken our recommendation survey yet! </h4>
     <button class="btn btn-primary" @click="toSurvey"> Take our Survey</button>
   </div>
 
-<div>
-  <h1> Some Recommendations</h1>
-</div>
-
   <!-- TODO: Preview recomendations -->
 
-    <div class="checklist">
+    <div class="checklist my-5">
+      <div>
+        <h1> Some Recommendations</h1>
+      </div>
       <div v-for="cat in Object.keys(categories)" :key="cat" class="checklist-cat mb-5">
         <div class="checklist-heading">{{cat}}<div>
         <div v-for="item in categories[cat]" :key="item.ID" class="flex">

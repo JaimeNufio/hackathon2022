@@ -6,6 +6,7 @@ import About from '@/components/About.vue'
 import Browse from '@/components/Browse.vue'
 import Survey from '@/components/Survey.vue'
 import Checklist from '@/components/Checklist.vue'
+import Explore from '@/components/Explore.vue'
 
 Vue.use(Router)
 
@@ -32,6 +33,11 @@ export default new Router({
       path: '/',
       name: 'Homepage',
       component: Homepage
+    },
+    {
+      path: '/explore/:id',
+      name: 'Explore',
+      component: Explore
     }
 
   ]
