@@ -15,7 +15,7 @@ app.get('/campgrounds', async (req, res) => {
   const url = 'https://api.yelp.com/v3/businesses/search'
   const params = {
     location: req.params.location || '80010',
-    term: 'campground ',
+    term: 'campground',
     limit: 50,
     radius: 40000,
     offset: parseInt(req.query.offset) * 50 || 0

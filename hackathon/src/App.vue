@@ -19,7 +19,7 @@
         <div class="container">
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-           
+
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="/">Home</a>
             </li>
@@ -32,13 +32,17 @@
             <li class="nav-item">
               <a class="nav-link" href="/about">About Us</a>
             </li>
-          
+
           </ul>
         </div>
       </div>
       </div>
     </nav>
-    <router-view />
+
+    <div class="content-body">
+      <router-view />
+    </div>
+
     <!-- Footer -->
 <footer class="bg-dark text-center text-white">
   <!-- Grid container -->
@@ -102,10 +106,9 @@
   </div>
 </template>
 
-
-
-
 <script>
+import { fab } from '@fortawesome/free-brands-svg-icons'
+
 export default {
   name: 'App'
 }
@@ -118,6 +121,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  height: 100%;
   /* margin-top: 60px; */
 }
 
@@ -128,6 +132,16 @@ export default {
 
 p {
   font-family: "Montserrat", sans-serif;
+}
+
+.content-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+
+}
+footer {
+  flex-shrink: 0;
 }
 
 @import "~bootstrap/dist/css/bootstrap.css";
