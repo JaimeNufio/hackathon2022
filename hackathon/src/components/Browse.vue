@@ -189,7 +189,7 @@ body {
   height: 100vh;
 }
 .list-group {
-  overflow: auto;
+  /* overflow: auto; */
   height: 85vh;
   border: 2px solid #dce4ec;
   border-radius: 5px;
