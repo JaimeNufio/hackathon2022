@@ -5,6 +5,7 @@ import Homepage from '@/components/Homepage'
 import About from '@/components/About.vue'
 import Browse from '@/components/Browse.vue'
 import Survey from '@/components/Survey.vue'
+import Checklist from '@/components/Checklist.vue'
 
 Vue.use(Router)
 
@@ -22,6 +23,10 @@ export default new Router({
     {path: '/survey',
       name: 'Survey',
       component: Survey
+    },
+    {path: '/checklist',
+      name: 'Checklist',
+      component: Checklist
     },
     {
       path: '/',

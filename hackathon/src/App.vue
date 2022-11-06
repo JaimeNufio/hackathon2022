@@ -24,10 +24,13 @@
               <a class="nav-link active" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Campers Checklist</a>
+              <a class="nav-link" href="/survey">Get Started</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Nearby Campsites</a>
+              <a class="nav-link" href="/survey">Find a Camp</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/checklist">Campers Checklist</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/about">About Us</a>
