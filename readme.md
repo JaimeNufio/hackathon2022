@@ -1,22 +1,22 @@
-# Snapshots
+# Snapshots / Preview
 
-# Homepage
+### Homepage
 Landing page for this app.
 ![homepage](https://github.com/JaimeNufio/hackathon2022/blob/master/hackathon/demo/Home.png?raw=true)
-# Camp Ground Browser
+### Camp Ground Browser
 Utility to preview campgrounds.
 ![Camp Ground Browse](https://github.com/JaimeNufio/hackathon2022/blob/master/hackathon/demo/Browse.png?raw=true)
-# Survey
+### Survey
 Take a quick survey so we can recommend items for a camping trip.
 ![Survey](https://github.com/JaimeNufio/hackathon2022/blob/master/hackathon/demo/Survey.png?raw=true)
-# Explore
+### Explore
 Preview testimonials or follow links to Yelp.com to see more.
 ![Explore](https://github.com/JaimeNufio/hackathon2022/blob/master/hackathon/demo/Explore.png?raw=true)
 
-# Checklist
+### Checklist
 Organize the items that we recommend you take on your next trip.
 ![Checklist](https://github.com/JaimeNufio/hackathon2022/blob/master/hackathon/demo/Reco.png?raw=true)
-# About Us
+### About Us
 Learn a bit about the authors of this web app.
 ![about us page](https://github.com/JaimeNufio/hackathon2022/blob/master/hackathon/demo/AboutUs.png?raw=true)
 
